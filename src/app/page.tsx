@@ -35,18 +35,27 @@ export default function Home() {
       <div className="mt-24 w-full flex flex-col items-center">
         <h2 className="text-2xl font-semibold mb-6">Projects</h2>
         <ul className="space-y-4 w-full max-w-xl">
-          <li className="bg-gray-800 p-4 rounded">
+          <li>
             <a
               href="https://github.com/VotePost/votepost"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-blue-400"
+              className="block bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900"
+              style={{ textDecoration: "none" }}
             >
               VotePost: A web application that hosts the ability to create and take polls.
             </a>
           </li>
-          <li className="bg-gray-800 p-4 rounded">Project 2: Description</li>
-          <li className="bg-gray-800 p-4 rounded">Project 3: Description</li>
+          <li>
+            <button className="block w-full bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900">
+              Project 2: Description
+            </button>
+          </li>
+          <li>
+            <button className="block w-full bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900">
+              Project 3: Description
+            </button>
+          </li>
           {/* Add more projects here */}
         </ul>
       </div>
