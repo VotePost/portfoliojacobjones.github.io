@@ -19,15 +19,15 @@ export default function Home() {
       <div
         className="sticky top-0 z-20 flex flex-col items-center bg-black pt-8 pb-4 transition-all duration-300"
         style={{
-          paddingTop: scrolled ? "10px" : "64px",
-          paddingBottom: scrolled ? "4px" : "32px",
+          paddingTop: scrolled ? "10px" : "48px",
+          paddingBottom: scrolled ? "4px" : "24px",
         }}
       >
         <Image
           src="/Jacob.png"
           alt="Welcome to the Portfolio of Jacob Jones"
-          width={scrolled ? 200 : 800}
-          height={scrolled ? 125 : 500}
+          width={scrolled ? 200 : 400}
+          height={scrolled ? 100 : 200}
           style={{
             pointerEvents: "none",
             transition: "width 0.3s, height 0.3s",
@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       {/* Welcome text and arrow, hidden after scroll */}
       {!scrolled && (
-        <div className="flex flex-col items-center justify-center min-h-[70vh] w-full">
+        <div className="flex flex-col items-center justify-center py-12 w-full">
           <h1 className="text-3xl font-bold text-center mb-6">
             Welcome to the Portfolio of Jacob Jones
           </h1>
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       )}
       {/* Projects Section */}
-      <div className="w-full flex flex-col items-center pt-16">
+      <div className="w-full flex flex-col items-center mt-32">
         <h2 className="text-2xl font-semibold mb-6">Projects</h2>
         <ul className="space-y-4 w-full max-w-xl">
           <li className="relative group">
