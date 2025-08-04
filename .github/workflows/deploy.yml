@@ -1,11 +1,5 @@
 # filepath: .github/workflows/deploy.yml
 name: Deploy Next.js static export to GitHub Pages
-uses: peaceiris/actions-gh-pages@v4
-with:
-  github_token: ${{ secrets.GITHUB_TOKEN }}
-  publish_dir: ./out
-  user_name: github-actions[bot]
-  user_email: github-actions[bot]@users.noreply.github.com
 
 on:
   push:
@@ -34,3 +28,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
