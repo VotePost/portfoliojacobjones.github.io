@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       {/* Welcome text and arrow, hidden after scroll */}
       {!scrolled && (
-        <div className="flex flex-col items-center mt-8">
+        <div className="flex flex-col items-center justify-center min-h-[70vh] w-full">
           <h1 className="text-3xl font-bold text-center mb-6">
             Welcome to the Portfolio of Jacob Jones
           </h1>
@@ -58,10 +58,8 @@ export default function Home() {
           </svg>
         </div>
       )}
-      {/* Spacer to force scrolling */}
-      <div className="h-[600px]"></div>
       {/* Projects Section */}
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center pt-16">
         <h2 className="text-2xl font-semibold mb-6">Projects</h2>
         <ul className="space-y-4 w-full max-w-xl">
           <li className="relative group">
