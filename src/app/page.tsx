@@ -6,11 +6,11 @@ export default function Home() {
       <Image
         src="/Jacob.png"
         alt="Welcome to the Portfolio of Jacob Jones"
-        width={500}
-        height={200}
+        width={800} // Increased width
+        height={320} // Increased height
         style={{ pointerEvents: "none" }}
       />
-      <h1 className="mt-6 text-2xl font-bold text-center">
+      <h1 className="mt-6 text-3xl font-bold text-center">
         Welcome to the Portfolio of Jacob Jones
       </h1>
       <div className="mt-8 flex flex-col items-center">
@@ -30,6 +30,16 @@ export default function Home() {
             strokeLinejoin="round"
           />
         </svg>
+      </div>
+      {/* Projects Section */}
+      <div className="mt-24 w-full flex flex-col items-center">
+        <h2 className="text-2xl font-semibold mb-6">Projects</h2>
+        <ul className="space-y-4 w-full max-w-xl">
+          <li className="bg-gray-800 p-4 rounded">Project 1: Description</li>
+          <li className="bg-gray-800 p-4 rounded">Project 2: Description</li>
+          <li className="bg-gray-800 p-4 rounded">Project 3: Description</li>
+          {/* Add more projects here */}
+        </ul>
       </div>
     </div>
   );
