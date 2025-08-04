@@ -35,7 +35,7 @@ export default function Home() {
       <div className="mt-24 w-full flex flex-col items-center">
         <h2 className="text-2xl font-semibold mb-6">Projects</h2>
         <ul className="space-y-4 w-full max-w-xl">
-          <li>
+          <li className="relative group">
             <a
               href="https://github.com/VotePost/votepost"
               target="_blank"
@@ -43,20 +43,28 @@ export default function Home() {
               className="block bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900"
               style={{ textDecoration: "none" }}
             >
-              VotePost: A web application that hosts the ability to create and take polls.
+              VotePost
             </a>
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-gray-900 text-white text-sm rounded-lg px-4 py-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-10">
+              A web application that hosts the ability to create and take polls.
+            </div>
           </li>
-          <li>
+          <li className="relative group">
             <button className="block w-full bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900">
-              Project 2: Description
+              Project 2
             </button>
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-gray-900 text-white text-sm rounded-lg px-4 py-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-10">
+              Description for Project 2.
+            </div>
           </li>
-          <li>
+          <li className="relative group">
             <button className="block w-full bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900">
-              Project 3: Description
+              Project 3
             </button>
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-gray-900 text-white text-sm rounded-lg px-4 py-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-10">
+              Description for Project 3.
+            </div>
           </li>
-          {/* Add more projects here */}
         </ul>
       </div>
     </div>
