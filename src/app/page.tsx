@@ -15,9 +15,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center text-white">
-      <div className="sticky top-0 z-20 flex flex-col items-center bg-black pt-8 pb-4 transition-all duration-300"
+      {/* Sticky image only */}
+      <div
+        className="sticky top-0 z-20 flex flex-col items-center bg-black pt-8 pb-4 transition-all duration-300"
         style={{
-          // Shrink image and text when scrolled
           paddingTop: scrolled ? "10px" : "64px",
           paddingBottom: scrolled ? "4px" : "32px",
         }}
@@ -29,39 +30,34 @@ export default function Home() {
           height={scrolled ? 125 : 500}
           style={{
             pointerEvents: "none",
-            transition: "width 0.3s, height 0.3s"
+            transition: "width 0.3s, height 0.3s",
           }}
         />
-        <h1
-          className="mt-6 text-3xl font-bold text-center transition-all duration-300"
-          style={{
-            fontSize: scrolled ? "1.5rem" : "2rem",
-            marginTop: scrolled ? "0.5rem" : "1.5rem"
-          }}
-        >
-          Welcome to the Portfolio of Jacob Jones
-        </h1>
-        {!scrolled && (
-          <div className="mt-8 flex flex-col items-center">
-            <span className="text-lg">Scroll to see projects</span>
-            <svg
-              className="mt-2 animate-bounce"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M12 5v14m0 0l-7-7m7 7l7-7"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        )}
       </div>
+      {/* Welcome text and arrow, hidden after scroll */}
+      {!scrolled && (
+        <div className="flex flex-col items-center mt-8">
+          <h1 className="text-3xl font-bold text-center mb-6">
+            Welcome to the Portfolio of Jacob Jones
+          </h1>
+          <span className="text-lg">Scroll to see projects</span>
+          <svg
+            className="mt-2 animate-bounce"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M12 5v14m0 0l-7-7m7 7l7-7"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      )}
       {/* Spacer to force scrolling */}
       <div className="h-[600px]"></div>
       {/* Projects Section */}
