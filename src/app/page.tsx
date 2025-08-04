@@ -76,19 +76,22 @@ export default function Home() {
               A web application that hosts the ability to create and take polls.
             </div>
           </li>
+          <li className="relative group">
+            <a
+              href="https://github.com/VotePost/votepost.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900"
+              style={{ textDecoration: "none" }}
+            >
+              Portfolio
+            </a>
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-gray-900 text-white text-sm rounded-lg px-4 py-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-10">
+              A personal portfolio showcasing my projects and skills.
+            </div>
+          </li>
           {/* Add more projects here */}
         </ul>
-        <a
-          href="https://github.com/VotePost/votepost.github.io"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block mt-6 bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900"
-        >
-          Portfolio
-        </a>
-        <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-gray-900 text-white text-sm rounded-lg px-4 py-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-10">
-          A personal portfolio showcasing my projects and skills.
-        </div>
       </div>
     </div>
   );
