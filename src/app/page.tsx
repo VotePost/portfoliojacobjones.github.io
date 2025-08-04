@@ -8,9 +8,8 @@ export default function Home() {
           className="dark:invert"
           src="/Jacob.png"
           alt="name"
-          width={180}
-          height={38}
-          priority
+          width={500}
+          height={100}
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
