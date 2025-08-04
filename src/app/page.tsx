@@ -23,7 +23,7 @@ export default function Home() {
           paddingBottom: scrolled ? "4px" : "24px",
         }}
       >
-        <Image
+        <img
           src="/Jacob.png"
           alt="Welcome to the Portfolio of Jacob Jones"
           width={scrolled ? 200 : 400}
