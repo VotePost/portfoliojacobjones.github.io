@@ -144,7 +144,26 @@ export default function Home() {
               {isTouch && <span className="block mt-2 text-xs text-purple-300">(Tap again to visit)</span>}
             </div>
           </li>
-          {/* Add more projects here */}
+          {/* Project 3 */}
+          <li className="relative group">
+            <a
+              href="/migrationproject"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-purple-700 px-8 py-6 text-lg text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900 cursor-pointer"
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleProjectClick(2, "/migrationproject", e)}
+            >
+              Migrating UI Libraries
+            </a>
+            <div
+              className={`absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-gray-900 text-white text-sm rounded-lg px-4 py-2 z-10 transition-opacity duration-200
+                ${showDesc[2] ? "opacity-100" : "opacity-0 pointer-events-none"} group-hover:opacity-100 group-hover:pointer-events-auto`}
+              style={{ cursor: isTouch ? "pointer" : "default" }}
+            >
+              A project in which I worked as a team to migrate a code-generated web application from one UI library (AntDesign) to another (MUI).
+              {isTouch && <span className="block mt-2 text-xs text-purple-300">(Tap again to visit)</span>}
+            </div>
+          </li>
         </ul>
       </section>
     </div>
