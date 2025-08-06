@@ -29,10 +29,14 @@ export default function MigrationProject() {
             Migration Project
           </h1>
           <p className="mb-4 indent-8">
-            This project involved working as a team to migrate a code-generated web application from one UI library (AntDesign) to another (MUI). The process required careful planning, collaboration, and a deep understanding of both libraries to ensure a seamless transition and maintain the application's functionality and appearance.
+            This project involved working as a team to migrate a code-generated web application from one UI library (AntDesign) to another (MUI).
+             The process required careful planning, collaboration, and a deep understanding of both libraries to ensure a seamless transition and 
+             maintain the application&apos;s functionality and appearance.
           </p>
           <p className="mb-8 indent-8">
-            My responsibilities included analyzing the existing AntDesign components, mapping them to their MUI equivalents, and refactoring the codebase to use MUI's styling and component paradigms. I also contributed to updating custom styles, resolving compatibility issues, and performing thorough testing to ensure the migrated application met all requirements and provided a consistent user experience.
+            My responsibilities included analyzing the existing AntDesign components, mapping them to their MUI equivalents, 
+            and refactoring the codebase to use MUI&apos;s styling and component paradigms. I also contributed to updating custom styles, resolving 
+            compatibility issues, and performing thorough testing to ensure the migrated application met all requirements and provided a consistent user experience.
           </p>
           <Link
             href="/"
