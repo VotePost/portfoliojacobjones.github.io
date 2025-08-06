@@ -29,12 +29,12 @@ export default function About() {
             About Me
           </h1>
           <p className="mb-4 indent-8">
-            Hi, I'm Jacob Jones. I'm a senior at Randolph College studying
-            computer science pursuing a career in software development/engineering.
-            I have a passion in art and design, which helps me incorporate my
-            creativity into my projects. I enjoy the frontend of web development,
-            creating user-friendly interfaces, and ensuring a seamless user
-            experience.
+            Hi, I&apos;m Jacob Jones. I&apos;m a senior at Randolph College
+            studying computer science pursuing a career in software
+            development/engineering. I have a passion in art and design, which
+            helps me incorporate my creativity into my projects. I enjoy the
+            frontend of web development, creating user-friendly interfaces, and
+            ensuring a seamless user experience.
           </p>
           <p className="mb-8 indent-8">
             I have experience with full stack development, in which I have worked
@@ -47,7 +47,6 @@ export default function About() {
             className="bg-black hover:bg-gray-900 text-white font-semibold px-6 py-3 transition-colors text-lg text-center w-full max-w-xs -ml-9 mt-14"
             style={{
               backgroundColor: "#ded1bcff",
-             
               color: "#000000ff", // dark text for contrast
               // border: "2px solid #d2c3abff",
             }}
