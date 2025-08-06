@@ -1,17 +1,19 @@
+
 "use client";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 
 export default function Home() {
-  const [showDesc, setShowDesc] = useState<Record<number, boolean>>({});
+  // Detect touch device
   const [isTouch, setIsTouch] = useState(false);
-
   useEffect(() => {
     setIsTouch("ontouchstart" in window || navigator.maxTouchPoints > 0);
   }, []);
 
+  // Show/hide project descriptions on tap (mobile)
+  const [showDesc, setShowDesc] = useState<{ [key: number]: boolean }>({});
+
   // For mobile: tap once to show description, tap again to redirect
-  const handleProjectClick = (idx: number, url: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+  function handleProjectClick(idx: number, url: string, e: React.MouseEvent<HTMLAnchorElement>) {
     if (isTouch) {
       if (!showDesc[idx]) {
         e.preventDefault();
@@ -22,10 +24,47 @@ export default function Home() {
       }
     }
     // On desktop, let default behavior happen
-  };
+  }
+
+  // For mobile: tap once to show description, tap again to redirect
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center text-white">
+      {/* Header with external links */}
+      <header className="w-full flex justify-center items-center py-6 bg-black">
+        <nav className="flex gap-2 w-full max-w-5xl justify-center">
+          <a
+            href="https://www.linkedin.com/in/jacob-jones-408576240/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-2 py-1 transition-colors text-sm sm:text-lg max-w-[90px] sm:max-w-xs w-full text-center truncate"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/VotePost"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-2 py-1 transition-colors text-sm sm:text-lg max-w-[90px] sm:max-w-xs w-full text-center truncate"
+          >
+            GitHub
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-2 py-1 transition-colors text-sm sm:text-lg max-w-[90px] sm:max-w-xs w-full text-center truncate"
+          >
+            Resume
+          </a>
+          <a
+            href="/about"
+            className="block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-2 py-1 transition-colors text-sm sm:text-lg max-w-[90px] sm:max-w-xs w-full text-center truncate"
+          >
+            About Me
+          </a>
+        </nav>
+      </header>
       {/* Hero Section: image, text, arrow */}
       <section className="w-full flex flex-col items-center justify-center" style={{ minHeight: "100vh" }}>
         <img
@@ -33,10 +72,10 @@ export default function Home() {
           alt="Welcome to the Portfolio of Jacob Jones"
           className="mb-8"
           style={{
-            width: "40vw",
+            width: "100vw",
             maxWidth: "320px",
             height: "auto",
-            aspectRatio: "2/1",
+            aspectRatio: "16/9",
             pointerEvents: "none",
             display: "block",
           }}
@@ -61,17 +100,17 @@ export default function Home() {
       </section>
       {/* Projects Section */}
       <section className="w-full min-h-screen flex flex-col items-center justify-center bg-black">
-        <h2 className="text-2xl font-semibold mb-6">Projects</h2>
-        <ul className="space-y-4 w-full max-w-xl">
+        <h2 className="text-4xl md:text-4xl font-bold mb-8">Projects</h2>
+        <ul className="space-y-8 w-full max-w-xl mt-8">
           {/* Project 1 */}
           <li className="relative group">
             <a
               href="https://github.com/VotePost/votepost"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900 cursor-pointer"
+              className="block bg-purple-700 px-8 py-6 text-lg text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900 cursor-pointer"
               style={{ textDecoration: "none" }}
-              onClick={(e) => handleProjectClick(0, "https://github.com/VotePost/votepost", e)}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleProjectClick(0, "https://github.com/VotePost/votepost", e)}
             >
               VotePost
             </a>
@@ -91,9 +130,8 @@ export default function Home() {
               href="https://github.com/VotePost/votepost.github.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-purple-700 rounded-lg px-6 py-4 text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900 cursor-pointer"
-              style={{ textDecoration: "none" }}
-              onClick={(e) => handleProjectClick(1, "https://github.com/VotePost/votepost.github.io", e)}
+              className="block bg-purple-700 px-8 py-6 text-lg text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900 cursor-pointer"
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleProjectClick(1, "https://github.com/VotePost/votepost.github.io", e)}
             >
               Portfolio
             </a>
@@ -112,8 +150,3 @@ export default function Home() {
     </div>
   );
 }
-  
- 
-  
- 
- 
