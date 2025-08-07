@@ -50,7 +50,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="/resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-purple-700 hover:bg-purple-900 text-white font-semibold px-2 py-1 transition-colors text-sm sm:text-lg max-w-[90px] sm:max-w-xs w-full text-center truncate"
@@ -148,8 +148,6 @@ export default function Home() {
           <li className="relative group">
             <a
               href="/migrationproject"
-              target="_blank"
-              rel="noopener noreferrer"
               className="block bg-purple-700 px-8 py-6 text-lg text-white font-semibold text-center transition-colors hover:bg-purple-900 focus:bg-purple-900 cursor-pointer"
               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleProjectClick(2, "/migrationproject", e)}
             >

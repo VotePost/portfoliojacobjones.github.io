@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import "../scroll-responsive.css";
 
 export default function MigrationProject() {
   return (
@@ -13,14 +14,31 @@ export default function MigrationProject() {
           backgroundPosition: "center",
         }}
       >
-        <div
-          className="relative z-10 text-base md:text-lg text-black text-left w-full h-full flex flex-col justify-start"
+        {/* SVG overlay for debugging mobile polygon, only visible on mobile */}
+        <svg
+          viewBox="0 0 100 178"
           style={{
-            padding: "23% 30% 10% 24%",
-            clipPath:
-              "polygon(20% 7%, 80% 7%, 93% 18%, 93% 82%, 80% 93%, 20% 93%, 7% 82%, 7% 18%)",
-            background: "rgba(0, 0, 0, 0)",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+            zIndex: 30,
+            display: "block",
           }}
+          className="block md:hidden"
+        >
+          <polygon
+            points="4,12.46 99,12.46 99,32.04 99,145.96 99,176.22 4,165.54 1,145.96 1,32.04"
+            fill="none"
+            stroke="lime"
+            strokeWidth="2"
+          />
+        </svg>
+        <div
+          id="scroll-text"
+          className="relative z-10 text-base md:text-lg text-black text-left w-full h-full flex flex-col justify-start"
         >
           <h1
             className="text-3xl md:text-4xl font-bold mb-2 text-black text-center"
