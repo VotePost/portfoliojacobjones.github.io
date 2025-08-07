@@ -1,0 +1,29 @@
+/* Default: mobile-first */
+@media (max-width: 649px) {
+#scroll-text {
+  /* background: rgb(255, 0, 0); /* Light red, semi-transparent */
+  /* border: 5px dashed rgb(0, 34, 255);              Blue dashed border for visibility */ 
+
+  clip-path: polygon(4% 7%, 99% 7%, 99% 18%, 99% 82%, 99% 99%, 4% 93%, 1% 82%, 1% 18%);
+  padding: 10% 0% 16% 0%; /* top, right, bottom, left */
+  }
+}
+
+/* Tablet: 650px and up, but below desktop */
+@media (min-width: 650px) and (max-width: 1023px) {
+  #scroll-text {
+    clip-path: polygon(13% 7%, 87% 7%, 94% 18%, 94% 82%, 87% 93%, 13% 93%, 6% 82%, 6% 18%);
+    padding: 12% 10% 12% 10%;
+    max-width: 90vw;
+  }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  #scroll-text {
+    clip-path: polygon(20% 7%, 80% 7%, 93% 18%, 93% 82%, 80% 93%, 20% 93%, 7% 82%, 7% 18%);
+    padding: 23% 30% 10% 24%;
+    max-width: 100%;
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import "../scroll-responsive.css";
 
 export default function About() {
   return (
@@ -13,14 +14,31 @@ export default function About() {
           backgroundPosition: "center",
         }}
       >
-        <div
-          className="relative z-10 text-base md:text-lg text-black text-left w-full h-full flex flex-col justify-start"
+        {/* SVG overlay for debugging mobile polygon, only visible on mobile */}
+        <svg
+          viewBox="0 0 100 100"
           style={{
-            padding: "23% 30% 10% 24%",
-            clipPath:
-              "polygon(20% 7%, 80% 7%, 93% 18%, 93% 82%, 80% 93%, 20% 93%, 7% 82%, 7% 18%)",
-            background: "rgba(0, 0, 0, 0)",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+            zIndex: 30,
+            display: "block",
           }}
+          className="block md:hidden"
+        >
+          <polygon
+            points="4,7 99,7 99,18 99,82 99,99 4,93 1,82 1,18"
+            fill="none"
+            stroke="lime"
+            strokeWidth="2"
+          />
+        </svg>
+        <div
+          id="scroll-text"
+          className="relative z-10 text-base md:text-lg text-black text-left w-full h-full flex flex-col justify-start"
         >
           <h1
             className="text-3xl md:text-4xl font-bold mb-2 text-black text-center"
@@ -40,7 +58,7 @@ export default function About() {
             I have experience with full stack development, in which I have worked
             on various projects that involve both frontend and backend
             technologies. My hard skills include HTML, CSS, JavaScript, React,
-            Node.js, Python, Java, SQL, YAML, GIT, Azure Dev Ops, and GitHub.
+            Node.js, Python, Java, SQL, YAML, GIT, .NET, Azure Dev Ops, and GitHub.
           </p>
           <Link
             href="/"
